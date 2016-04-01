@@ -2,9 +2,7 @@
 
 Algorithm
 ============================
-I thought of porting my C program for tic-tac-toe written several years ago to Python since C is considered too main stream nowadays. The game is played by recursing down the game/decision tree and choosing the best move that maximizes the gain and minimizes the loss. Running time is proportional to number of plies or the lookahead.
-minimax algorithm belongs to branch and bounds class of algorithm.
-
+I thought of porting my C program for tic-tac-toe written several years ago to Python since C is considered too main stream nowadays. The game is played by recursing down the game/decision tree and choosing the best move that maximizes the gain and minimizes the loss. Running time is proportional to number of plies or the lookahead. Minimax algorithm belongs to branch and bounds class of algorithm.
 
 TODO
 ============================
