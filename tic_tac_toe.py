@@ -26,7 +26,7 @@ def GetScore(game):
 def minimax(game, depth, maximizingplayer):
 
     score, choice = GetScore(game)
-    if score == WIN or score == LOSE:
+    if depth == 0 or score == WIN or score == LOSE:
         return score, game
 
     if maximizingplayer:
@@ -35,7 +35,7 @@ def minimax(game, depth, maximizingplayer):
         games = GeneratePossibleMoves(game, 'O')
         for child in games:
             v, move = minimax(child, depth-1, False)
-            if v >= best:
+            if v > best-1:
                 best_child = child
                 best = v
         return best, best_child
@@ -123,13 +123,19 @@ def GeneratePossibleMoves(Gameboard, choice):
 
 def NextMove(Gameboard):
     score, game = minimax(Gameboard, 10, True)
+    if (game == None):
+        GameComplete(score, [])
     CopyMove(Gameboard, game)
     score, choice = GetScore(Gameboard)
     return score, 'xx'
 
 def GameComplete(score, Gameboard):
     cont = True
-    if score == LOSE:
+
+    if Gameboard == []:
+        print ('Game drawn!!!')
+        cont = False
+    elif score == LOSE:
         print ('Congratulations!!! You win :)')
         cont = False
     elif score == WIN:
