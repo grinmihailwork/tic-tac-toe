@@ -2,7 +2,7 @@
 
 Algorithm
 ============================
-The game is played by recursing down the game/decision tree and chosing the best move that maximizes the gain and minimizes the loss. Running time is proportional to number of plies or the lookahead. 
+The game is played by recursing down the game/decision tree and choosing the best move that maximizes the gain and minimizes the loss. Running time is proportional to number of plies or the lookahead. 
 
 TODO
 ============================
