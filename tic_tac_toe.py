@@ -122,7 +122,7 @@ def GeneratePossibleMoves(Gameboard, choice):
     return list_of_moves
 
 def NextMove(Gameboard):
-    score, game = minimax(Gameboard, 10, True)
+    score, game = minimax(Gameboard, 2, True)
     if (game == None):
         GameComplete(score, [])
     CopyMove(Gameboard, game)
